@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DropDown Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <style>
+        body{
+            background-color: #313e16; 
+        }
+        *{
+            margin: 0;
+            padding: 0; 
+        }
+         .one i{
+            font-size: 14px; 
+            margin-left: 7px; 
+        }
+        
+/* test test*/
+/*
+        
+        .two i,  .three i, .four i{
+            position: absolute;
+            top: 20px;
+            right: 50px; 
+        }
+*/
+    
+/*
+        .two i, .three i, four i{
+           position: absolute;
+            top: 10px; 
+        }
+*/
+        
+        
+/*        Common css ends*/
+        
+        .menu_area{
+            width: 100%;
+            height: 80px;
+            background-color: #ff0000;
+            
+        }
+        .menu{
+            width: 960px;
+            background-color: #ff0000;
+            height: 80px;
+            margin: 0 auto; 
+        }
+        .menu ul{
+            list-style: none;
+            display: flex;
+            justify-content: center; 
+        }
+        .menu ul li{
+            position: relative; 
+        }
+        .menu ul li a{
+            font-family: cursive;
+            font-size: 16px;
+            color: #ffffff;
+            text-decoration: none;
+            line-height: 80px;
+            padding: 0px 15px; 
+            transition: all linear 0.5s; 
+            display: block;  
+        }
+        .menu ul li a:hover{
+            background-color: #000000; 
+            border-top: 4px solid #fff000; 
+        }
+/*        One start*/
+        .submenu1{
+            display: none; 
+        }
+        .one:hover .submenu1{
+            display: block; 
+            position: absolute;
+            top: 80px; 
+            left: 0; 
+        }
+        .one:hover .submenu1 ul{
+            display: block; 
+        }
+        
+        .one:hover .submenu1 ul a{
+            background-color: #ff0000; 
+            width: 150px; 
+            line-height: 50px; 
+            transition: all linear 0.5s; 
+            border-bottom: 1px solid rgba(255, 255, 255, .5); 
+        }
+        .one:hover .submenu1 ul a:hover{
+            background-color: #000000; 
+            border-top: 4px solid #fff000; 
+            border-bottom: none; 
+        }
+        
+/*        One ends*/
+        .submenu2{
+            display: none; 
+        }
+        .two:hover .submenu2{
+            display: block; 
+            position: absolute;
+            left: 180px;
+            top: 10px; 
+        }
+    
+/*        two ends*/
+        .submenu3{
+            display: none; 
+        }
+        .three:hover .submenu3{
+            display: block;
+            position: absolute;
+            left: 180px;
+            top: 10px; 
+        }
+/*        three ends*/
+        .submenu4{
+            display: none;
+        }
+        .four:hover .submenu4{
+            display: block;
+            position: absolute;
+            left: 180px;
+            top: 10px
+            
+        }
+/*        Four ends*/
+        
+    </style>
+</head>
+<body>
+    <div class="menu_area">
+        <div class="menu">
+            <ul>
+                <li class="one"><a href="about.html" target="_blank">Home <i class="fas fa-chevron-down"></i></a>
+                  <div class="submenu1">
+                      <ul>
+                          <li><a href="#">Asma</a></li>
+                          <li><a href="#">Chandan</a></li>
+                          <li><a href="#">Sangita</a></li>
+                          <li><a href="#">Tanjina</a></li>
+                          <li class="two"><a href="#">Tuhin Bhai <i class="fas fa-chevron-right"></i></a>
+                              <div class="submenu2">
+                                  <ul>
+                                      <li class="three"><a href="#">Child1 <i class="fas fa-chevron-right"></i></a>
+                                          <div class="submenu3">
+                                              <ul>
+                                                  <li class="four"><a href="#">Boy <i class="fas fa-chevron-right"></i></a>
+                                                    <div class="submenu4">
+                                                        <ul>
+                                                            <li><a href="#">Tuhin Jr Jr1</a></li>
+                                                            <li><a href="#">Tuhin Jr Jr 2</a></li>
+                                                        
+                                                        </ul>
+                                                    </div>
+                                                  </li>
+                                                  <li><a href="#">Girl</a></li>
+                                                  <li><a href="#">Boy</a></li>
+                                              </ul>
+                                          </div>
+                                      </li>
+                                      <li><a href="#">Child2</a></li>
+                                      <li><a href="#">Child3</a></li>
+                                      <li><a href="#">Child4</a></li>
+                                      <li class="three"><a href="#">Child6 <i class="fas fa-chevron-right"></i></a>
+                                        <div class="submenu3">
+                                            <ul>
+                                                  <li><a href="#">Boy</a></li>
+                                                  <li><a href="#">Girl</a></li>
+                                                  <li><a href="#">Boy</a></li>
+                                              </ul>
+                                        </div>
+                                      </li>
+                                      <li><a href="#">Child7</a></li>
+                                      <li><a href="#">Child8</a></li>
+                                      <li><a href="#">Child9</a></li>
+                                      <li><a href="#">Child10</a></li>
+                                      <li><a href="#">Child11</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                </li>
+                <li><a href="#" target="_blank">About</a></li>
+                <li class="one"><a href="#" target="_blank">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="submenu1">
+                         <ul>
+                          <li><a href="#">Asma1</a></li>
+                          <li><a href="#">Chandan1</a></li>
+                          <li class="two"><a href="#">Parvej <i class="fas fa-chevron-right"></i></a>
+                            <div class="submenu2">
+                                <ul>
+                                    <li class="three"><a href="#">Dance <i class="fas fa-chevron-right"></i></a>
+                                        <div class="submenu3">
+                                            <ul>
+                                                <li><a href="#">Classic</a></li>
+                                                <li><a href="#">Jazz</a></li>
+                                                <li><a href="#">Free-Style</a></li>
+                                                <li><a href="#">Folk Dance</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="three"><a href="#">Music <i class="fas fa-chevron-right"></i></a>
+                                     <div class="submenu3">
+                                         <ul>
+                                             <li><a href="#">Rock</a></li>
+                                             <li><a href="#">Folk</a></li>
+                                             <li><a href="#">Pop</a></li>
+                                             <li><a href="#">Classic</a></li>
+                                             <li><a href="#">Heavy Metal</a></li>
+                                         </ul>
+                                     </div>
+                                    </li>
+                                    <li><a href="#">Drawing</a></li>
+                                    <li><a href="#">Programming</a></li>
+                                </ul>
+                            </div>
+                          </li>
+                          <li><a href="#">Sangita1</a></li>
+                          <li><a href="#">Tanjina1</a></li>
+                          
+                      </ul>
+                    </div>
+                </li>
+                <li><a href="#" target="_blank">Blog</a></li>
+                <li class="one"><a href="#" target="_blank">Contact <i class="fas fa-chevron-down"></i></a>
+                    <div class="submenu1">
+                        <ul>
+                          <li><a href="#">Asma1</a></li>
+                          <li><a href="#">Chandan1</a></li>
+                          <li><a href="#">Sangita1</a></li>
+                          <li><a href="#">Tanjina1</a></li>
+                          <li><a href="#">Tuhin Bhai1</a></li>
+                      </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
